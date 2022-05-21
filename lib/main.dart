@@ -1,4 +1,5 @@
 import 'package:amazon_clone/constants/golobal_variables.dart';
+import 'package:amazon_clone/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       onGenerateRoute: (settings) => generateRoute(settings),
       title: 'Amazon Clone',
       theme: ThemeData(
        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
