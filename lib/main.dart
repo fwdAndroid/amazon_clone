@@ -1,4 +1,5 @@
 import 'package:amazon_clone/constants/golobal_variables.dart';
+import 'package:amazon_clone/features/auth/screens/auth_screen.dart';
 import 'package:amazon_clone/router.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Text('data')
+      home: AuthScreen(),
     );
   }
 }
