@@ -11,7 +11,7 @@ const authRouter = require("./routes/auth");
 const PORT = process.env.PORT || 3000;
 const app = express();
 const DB =
-  "mongodb+srv://zeosoft:Zeo123456@cluster0.dzacj.mongodb.net/?retryWrites=true&w=majority  ";
+  "mongodb+srv://zeosoft:Zeo123456@cluster0.dzacj.mongodb.net/?retryWrites=true&w=majority";
 
 // middleware
 // use to communicate between client to server
@@ -22,12 +22,6 @@ const DB =
 // app.use(userRouter);
 
 // Connections
-
-
-app.listen(PORT, () => {
-  console.log(`connected at port ${PORT}`);
-});
-
 mongoose
   .connect(DB)
   .then(() => {
@@ -36,3 +30,7 @@ mongoose
   .catch((e) => {
     console.log(e);
   });
+
+app.listen(PORT, () => {
+  console.log(`connected at port ${PORT}`);
+});
